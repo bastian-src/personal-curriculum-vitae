@@ -1,0 +1,115 @@
+
+\newlist{keyskills}{itemize}{3}
+\setlist[keyskills,1]{label=\textbullet,leftmargin=6mm}
+
+\newcommand{\CVName}{Timo Bachmann}
+\newcommand{\CVWebsite}{\href{https://tfachmann.com}{tfachmann.com}}
+\newcommand{\CVMail}{\href{mailto:bachmanntj@gmail.com}{bachmanntj@gmail.com}}
+\newcommand{\CVGithub}{\href{https://github.com/tfachmann}{tfachmann}}
+\newcommand{\CVPhone}{+49 175 8682972}
+\newcommand{\CVAddress}{80337 Munich, Germany}
+\newcommand{\CVBirthday}{April 12, 1998}
+\newcommand{\CVNationality}{German, Swiss}
+
+\newcommand{\CVAboutMe}{
+Passionate about making things work and learning new tools.
+Dives deep into nerdy topics of Linux, new programming languages and paradigms, software engineering and machine learning.
+Strong focus on writing readable, testable, paralellizable and safe source code.
+A terminal with Vim and tmux is all I need.
+Likes hiking and poetry.}
+
+\newcommand{\CVKeySkills}{
+\begin{keyskills}
+  \item \textbf{Artificial Intelligence}\\ ML, data vis, optimization
+  \item \textbf{Robotics}\\ 7-DoF LWRs, Ontologies
+  \item \textbf{CI \& Deployment}\\ Conan, Docker, Jenkins
+  \item \textbf{Linux \& Terminal}\\ Fast with linux, vim, tmux
+  \item \textbf{Languages}\\ C++, Python, Rust % TODO: fix C++ (use \verb)
+\end{keyskills}
+}
+
+\newcommand{\CVLanguages}{
+\begin{tabular}[c]{rl}
+  \textbf{German} & Native \\
+  \textbf{English} & C2 \\
+  \textbf{French} & B1 \\
+\end{tabular}
+}
+
+\newcommand{\CVEducation}{
+\CVEntry{2021 -- Now}{Technical University Munich (TUM)}{
+    M.Sc\ Robotics, Cognition, Intelligence\\
+    Current grade: 1.9\\
+}
+\CVEntry{2017 -- 2020}{Cooperative State University Mannheim (DHBW)}{
+    B.Sc.\ Information and Communication Technology\\
+    German Aerospace Center (DLR)\\
+    Final grade: 1.3\\
+}
+\CVEntry{2007 -- 2016}{Allgemeine Hochschulreife}{
+    Alexander-von-Humboldt Gymnasium\\
+    Final grade: 1.3\\
+}
+}
+
+
+\newcommand{\CVWork}{
+\CVEntry{2017 -- Now}{German Aerospace Center (DLR)}{
+    Department of Cognitive Robotics, Industrial Robotics
+}%
+\CVSubEntry{2020 -- Now}{
+    Research Scientist and Engineer
+    {
+        \small\begin{spacing}{0.9}
+        Kinematic workspace analysis, autonomous task execution and ontological representation of data in the industrial robotics domain.
+        \end{spacing}%
+        \vspace{2pt}
+    }%
+}%
+\CVSubEntry{2017 -- 2020}{
+    Working Student
+    {
+        \small\begin{spacing}{0.9}
+        Joint dual study program with DHBW.
+        \end{spacing}%
+        \vspace{2pt}
+    }
+}\\\\
+\CVEntry{2016 -- 2017}{Robert-Dyckerhoff Foundation, Thailand}{
+    Volunteer -- Teaching English language\\
+}
+\vspace{5mm}
+\printbibliography[title=Publications]
+}
+
+\newcommand{\CVSkills}{
+\begin{tcbraster}[raster columns=2]
+    \begin{tcolorbox}[colback=white, boxrule=0pt, frame empty, nobeforeafter]
+        {\color{textgray} Core Programming Languages }\\
+        \Icon{\IconSize}{1.15}{./src/cpp.pdf}
+        \Icon{\IconSize}{1.1}{./src/python.pdf}
+        \Icon{\IconSize}{1.3}{./src/rust.pdf}
+        \\\\
+        {\color{textgray} Deployment Tools }\\
+        \Icon{\IconSize}{1.1}{./src/cmake.pdf}
+        \Icon{\IconSize}{1.1}{./src/conan.pdf}
+        \Icon{\IconSize}{1.3}{./src/docker.pdf}
+        \Icon{\IconSize}{1.05}{./src/jenkins.pdf}
+        \Icon{\IconSize}{1.1}{./src/artifactory.pdf}
+        \\\\
+        {\color{textgray} Other Tools }\\
+        \Icon{\IconSize}{1.0}{./src/neovim.pdf}
+        \hspace*{-6pt}
+        \Icon{\IconSize}{1.25}{./src/github.pdf}
+        \Icon{\IconSize}{1.1}{./src/javascript.pdf}
+        \Icon{\IconSize}{1.1}{./src/webassembly.pdf}
+        \begin{minipage}[c]{\IconSize\textwidth}
+            \vspace*{4pt}
+            \hspace*{-3.5pt}
+            \LARGE \LaTeX
+        \end{minipage}
+    \end{tcolorbox}
+\end{tcbraster}
+}
+
+
