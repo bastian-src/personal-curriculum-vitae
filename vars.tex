@@ -3,6 +3,7 @@
 \setlist[keyskills,1]{label=\textbullet,leftmargin=6mm}
 
 \newcommand{\CVName}{Bastian Schmidt}
+\newcommand{\CVLinkedIn}{\href{https://www.linkedin.com/in/bastian-schmidt-65ab6a252/}{Bastian Schmidt}}
 \newcommand{\CVWebsite}{\href{https://schmidt-systems.eu}{schmidt-systems.eu}}
 \newcommand{\CVMail}{\href{mailto:basti@schmidt-electronics.de}{basti@schmidt-electronics.de}}
 \newcommand{\CVGithub}{\href{https://github.com/bastian-src}{bastian-src}}
@@ -12,29 +13,29 @@
 \newcommand{\CVNationality}{German}
 
 \newcommand{\CVAboutMe}{
-% Eager to learn new things, meet new people
-Passionate about making things work and learning new tools.
-Dives deep into nerdy topics of Linux, new programming languages and paradigms, software engineering and machine learning.
-Strong focus on writing readable, testable, paralellizable and safe source code.
-A terminal with Vim and tmux is all I need.
-Likes hiking and poetry.}
+Passionate about making things work and learning new tools.\\
+A fan of visualizing complex problems with UML-like diagrams for better understanding.\\ 
+Eager to learn new things and solve problems in a team.\\
+Strong focus on open source solutions - contributing to achieve a public benefit.\\
+Likes to socialize, meet friends, and get in touch with new people.
+}
 
 % TODO: Edit this
 \newcommand{\CVKeySkills}{
 \begin{keyskills}
-  \item \textbf{Artificial Intelligence}\\ ML, data vis, optimization
-  \item \textbf{Robotics}\\ 7-DoF LWRs, Ontologies
-  \item \textbf{CI \& Deployment}\\ Conan, Docker, Jenkins
-  \item \textbf{Linux \& Terminal}\\ Fast with linux, vim, tmux
-  \item \textbf{Languages}\\ C++, Python, Rust % TODO: fix C++ (use \verb)
+  \item \textbf{Operating Systems}\\ Linux, distributed systems, embedded systems
+  \item \textbf{Automation}\\ Salt, Ansible, Vagrant
+  \item \textbf{CI/CD}\\ Git, Docker, Jenkins
+  \item \textbf{Development}\\ Python, \texttt{C++}, Ruby on Rails, from low-level hardware to high-level UI  % TODO: fix C++ (use \verb)
 \end{keyskills}
 }
 
 \newcommand{\CVLanguages}{
 \begin{tabular}[c]{rl}
   \textbf{German} & Native \\
-  \textbf{English} & C2 \\
-  \textbf{Latin} & \\
+  \textbf{English} & C1 \\
+  \textbf{Dutch} & Basic knowledge\\
+  \textbf{Latin} & Basic knowledge\\
 \end{tabular}
 }
 
@@ -44,7 +45,7 @@ Likes hiking and poetry.}
     Current grade: 1.7\\
 }
 \CVEntry{2021 -- 2022}{University of Utrecht (UU)}{
-    2 Exchange Semester in the Netherlands\\
+    2 Exchange Semesters in the Netherlands\\
     Courses in Multimedia Retrieval, Game Physics, Sound and Music Technology\\
 }
 \CVEntry{2016 -- 2019}{Cooperative State University Mannheim (DHBW)}{
@@ -59,13 +60,12 @@ Likes hiking and poetry.}
 }
 
 
-% TODO: Edit this
 \newcommand{\CVWork}{
 \CVEntry{2020 -- Now}{Atix AG}{
     \textbf{Working Student.} Engineering team\\
     {
         %\small\begin{spacing}{0.9}
-            Improving the \href{https://github.com/theforeman/foreman_salt}{Foreman Salt Plugin} and integrating Ubuntu Autoinstall into \href{https://theforeman.org/}{Foreman}.
+            Improve the \href{https://github.com/theforeman/foreman_salt}{Foreman Salt Plugin} and integrate Ubuntu Autoinstall into \href{https://theforeman.org/}{Foreman}.
         %\end{spacing}%
         \vspace{6mm}
     }
@@ -77,53 +77,59 @@ Likes hiking and poetry.}
     \textbf{Research Scientist and Engineer.} Department of Communication Systems
     {
         \small\begin{spacing}{0.9}
-        Part of the swarm exploration group.
+            Support the European \href{https://heimdall-h2020.eu/}{HEIMDALL} project as a member of the swarm exploration group.
         %Kinematic workspace analysis, autonomous task execution and ontological representation of data in the industrial robotics domain.
         \end{spacing}%
         \vspace{2pt}
     }%
 }%
 \CVSubEntry{2016 -- 2019}{
-    \textbf{Working Student.} Department of Structural Dynamics and System Identification
+    \textbf{Working Student.} Department of Structural Dynamics and System Identification (Dual study program with DHBW)
     {
         \small\begin{spacing}{0.9}
-        Part of the group for vibro-acoustic simulations and experiments.
-        Joint dual study program with DHBW.
+            Develop a system for sound intensity measurements as a member of the group for vibro-acoustic simulations and experiments.\\
         \end{spacing}%
         \vspace{2pt}
     }
 }
-\vspace{5mm}
-%\printbibliography[title=Publications]
 }
 
-% TODO: Edit this
+
+\newcommand{\CVProjects}{
+\CVEntry{2021}{Open Source Plugin Contribution: Foreman Salt}{
+    Presentation at the \href{https://youtu.be/qFa0uGq1X7U?t=0}{ForemanCon 2021}, Salt configuration management integration
+}\CVEntry{2019}{Bachelor Thesis: Control Interface for Robotic Arm}{
+    KUKA industrial robot manipulator, Matlab toolbox extension, robot control interface
+}
+\CVEntry{2019}{Student Research Project: Database Integration for a Logistic System}{
+    Design database model, CAN bus interface, embedded systems programming
+}
+\CVEntry{2018 -- 2019}{Sound Intensity Measurement System}{
+    LabVIEW data acquisition, automation of sound intensity measurements, 3D camera tracking
+}
+%\CVEntry{2017 -- 2018}{Sound Intensity Measuremnt System}{
+%    Network protocol, 
+%}
+}
+
+
 \newcommand{\CVSkills}{
 \begin{tcbraster}[raster columns=2]
     \begin{tcolorbox}[colback=white, boxrule=0pt, frame empty, nobeforeafter]
         {\color{textgray} Core Programming Languages }\\
-        \Icon{\IconSize}{1.15}{./src/cpp.pdf}
-        \Icon{\IconSize}{1.1}{./src/python.pdf}
-        \Icon{\IconSize}{1.3}{./src/rust.pdf}
-        \\\\
-        {\color{textgray} Deployment Tools }\\
-        \Icon{\IconSize}{1.1}{./src/cmake.pdf}
-        \Icon{\IconSize}{1.1}{./src/conan.pdf}
-        \Icon{\IconSize}{1.3}{./src/docker.pdf}
-        \Icon{\IconSize}{1.05}{./src/jenkins.pdf}
-        \Icon{\IconSize}{1.1}{./src/artifactory.pdf}
+        \Icon{\IconSize}{1.1}{./src/col_python.pdf}
+        \Icon{\IconSize}{1.0}{./src/col_ruby.pdf}
+        \Icon{\IconSize}{1.1}{./src/col_cpp.pdf}
+        \Icon{\IconSize}{1.1}{./src/col_java.pdf}
+        \Icon{\IconSize}{1.1}{./src/col_c.pdf}
         \\\\
         {\color{textgray} Other Tools }\\
-        \Icon{\IconSize}{1.0}{./src/neovim.pdf}
-        \hspace*{-6pt}
-        \Icon{\IconSize}{1.25}{./src/github.pdf}
-        \Icon{\IconSize}{1.1}{./src/javascript.pdf}
-        \Icon{\IconSize}{1.1}{./src/webassembly.pdf}
-        \begin{minipage}[c]{\IconSize\textwidth}
-            \vspace*{4pt}
-            \hspace*{-3.5pt}
-            \LARGE \LaTeX
-        \end{minipage}
+        \Icon{\IconSize}{1.1}{./src/col_github.pdf}
+        \Icon{\IconSize}{1.1}{./src/col_gitlab.pdf}
+        \Icon{\IconSize}{1.15}{./src/col_docker.pdf}
+        \Icon{\IconSize}{1.15}{./src/col_jenkins.pdf}
+        \Icon{\IconSize}{.9}{./src/col_vim.pdf}
+        %\hspace*{-6pt}
     \end{tcolorbox}
 \end{tcbraster}
 }

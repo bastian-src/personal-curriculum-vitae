@@ -10,7 +10,9 @@
 \usepackage{duckuments}
 \usepackage{fontawesome5}
 \usepackage{setspace}
-\usepackage{hyperref}
+\usepackage[colorlinks=false,
+            allbordercolors={0 0 0},
+            pdfborderstyle={/S/U/W .5}]{hyperref}
 \usepackage{booktabs}
 \usepackage{svg}
 \usepackage{import}
@@ -24,7 +26,8 @@
 
 \tcbuselibrary{raster}
 \geometry{left=1.0cm, right=0.5cm, top=1.0cm, bottom=1.0cm}
-
+%#0086d4 % 35 149 236
+%\definecolor{sidebar}{RGB}{35,149,236}
 \definecolor{sidebar}{RGB}{233,233,233}
 \definecolor{textgray}{RGB}{73,73,73}
 \textblockcolour{sidebar}
@@ -79,15 +82,18 @@
     \end{center}
     \small
     \begin{spacing}{1.325}
-        \hspace*{10pt}\faIcon{globe-americas} \CVWebsite \\
-        \hspace*{10pt}\faIcon{envelope} \CVMail \\
-        \hspace*{10pt}\faIcon{github} \CVGithub \\
-        \hspace*{10pt}\faIcon{phone} \CVPhone \\
-        \hspace*{10pt}\faIcon{home} \CVAddress \\
-        \hspace*{10pt}\faIcon{birthday-cake} \CVBirthday \\
-        \hspace*{10pt}\faIcon{flag} \CVNationality
+        \begin{tabular}[c]{p{1mm}l}
+%            \faIcon{globe-americas} & \CVWebsite \\
+            \faIcon{linkedin} & \CVLinkedIn \\
+            \faIcon{envelope} & \CVMail \\
+            \faIcon{github} & \CVGithub \\
+            \faIcon{phone} & \CVPhone \\
+            \faIcon{home} & \CVAddress \\
+            \faIcon{birthday-cake} & \CVBirthday \\
+            \faIcon{flag} & \CVNationality
+        \end{tabular}
     \end{spacing}
-    \vspace{2mm}
+    \vspace{1mm}
 
     \begin{center}
         {\textbf{ABOUT ME}} \\
@@ -96,14 +102,14 @@
         \CVAboutMe
     \end{center}
 
-    \vspace{2mm}
+    \vspace{1mm}
     \begin{center}
         {\textbf{KEY SKILLS}} \\
     \end{center}
 
     \CVKeySkills
 
-    \vspace{2mm}
+    \vspace{1mm}
     \begin{center}
         {\textbf{LANGUAGES}} \\
     \end{center}
@@ -118,12 +124,17 @@
 
     \CVEducation
 
-    \vspace{5mm}
+    \vspace{.4mm}
     \section*{Work Experience}
 
     \CVWork
 
-    \vspace{5mm}
+    \vspace{.4mm}
+    \section*{Projects}
+
+    \CVProjects
+
+    \vspace{.4mm}
     \section*{Skills and Tools}
 
     \CVSkills
