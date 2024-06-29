@@ -9,6 +9,9 @@
 \usepackage{graphicx}
 \usepackage{duckuments}
 \usepackage{fontawesome5}
+% Use moden font:
+%\usepackage{fontspec}
+%\setmainfont{Noto Sans}
 \usepackage{setspace}
 \usepackage[colorlinks=false,
             allbordercolors={0 0 0},
@@ -62,6 +65,19 @@
     \end{minipage}%
 }
 
+\newcommand{\CVSubEntryLocation}[3]{
+    \begin{minipage}[t]{0.23\textwidth}
+        \vspace{3pt}
+        \hspace{8pt}#1
+
+        \hspace{8pt}#2
+    \end{minipage}%
+    \begin{minipage}[t]{0.76\textwidth}
+        \vspace{3pt}
+        #3
+    \end{minipage}%
+}
+
 \include{vars}
 
 \begin{document}
@@ -76,13 +92,13 @@
         {\large \textbf{\CVName}} \\
     \end{center}
 
-    \vspace{2mm}
+    \vspace{-7pt}
     \begin{center}
         {\textbf{CONTACT}} \\
     \end{center}
     \small
     \begin{spacing}{1.325}
-        \begin{tabular}[c]{p{1mm}l}
+      \begin{tabular}[c]{p{1mm}l}
 %            \faIcon{globe-americas} & \CVWebsite \\
             \faIcon{linkedin} & \CVLinkedIn \\
             \faIcon{envelope} & \CVMail \\
@@ -93,7 +109,7 @@
             \faIcon{flag} & \CVNationality
         \end{tabular}
     \end{spacing}
-    \vspace{1mm}
+    \vspace{-1pt}
 
     \begin{center}
         {\textbf{ABOUT ME}} \\
@@ -102,14 +118,14 @@
         \CVAboutMe
     \end{center}
 
-    \vspace{1mm}
+    \vspace{-1pt}
     \begin{center}
         {\textbf{KEY SKILLS}} \\
     \end{center}
 
     \CVKeySkills
 
-    \vspace{1mm}
+    \vspace{-1pt}
     \begin{center}
         {\textbf{LANGUAGES}} \\
     \end{center}
@@ -124,17 +140,17 @@
 
     \CVEducation
 
-    \vspace{.4mm}
+    \vspace{-5pt}
     \section*{Work Experience}
 
     \CVWork
 
-    \vspace{.4mm}
+    \vspace{-5pt}
     \section*{Projects}
 
     \CVProjects
 
-    \vspace{.4mm}
+    \vspace{-5pt}
     \section*{Skills and Tools}
 
     \CVSkills
