@@ -1,0 +1,185 @@
+\documentclass[a4paper, 10pt]{article}
+
+%\usepackage{showframe}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage[absolute]{textpos}
+\usepackage[most]{tcolorbox}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{duckuments}
+\usepackage{fontawesome5}
+% Use moden font:
+%\usepackage{fontspec}
+%\setmainfont{Noto Sans}
+\usepackage{setspace}
+%\usepackage[colorlinks=false,
+%            allbordercolors={0 0 0},
+%            pdfborderstyle={/S/U/W .5}]{hyperref}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{svg}
+\usepackage{import}
+\usepackage{enumitem}
+\usepackage[style=authoryear]{biblatex}
+
+\setlist[itemize]{noitemsep, topsep=1mm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+
+\addbibresource{publications.bib}
+\nocite{*}
+
+\TPGrid[0mm,0mm]{10}{10}
+
+\tcbuselibrary{raster}
+\geometry{left=1.0cm, right=0.5cm, top=1.0cm, bottom=1.0cm}
+%#0086d4 % 35 149 236
+%\definecolor{sidebar}{RGB}{35,149,236}
+\definecolor{sidebar}{RGB}{233,233,233}
+\definecolor{textgray}{RGB}{73,73,73}
+\textblockcolour{sidebar}
+
+\newcommand{\IconSize}{0.08}
+\newcommand{\Icon}[3]{
+    \begin{minipage}[c]{#1\linewidth}
+        \vspace*{4pt}
+        \includegraphics[width=#2\linewidth]{#3}
+    \end{minipage}
+}
+
+\newcommand{\CVEntry}[3]{
+    \begin{minipage}[t]{0.23\textwidth}
+        \textbf{#1}
+    \end{minipage}%
+    \begin{minipage}[t]{0.76\textwidth}
+        %\textbf{\large #2}\\
+        \textbf{#2}\\
+        #3
+    \end{minipage}%
+}
+
+\newcommand{\CVSubEntry}[2]{
+    \begin{minipage}[t]{0.23\textwidth}
+        \vspace{3pt}
+        \hspace{8pt}#1
+    \end{minipage}%
+    \begin{minipage}[t]{0.76\textwidth}
+        \vspace{3pt}
+        #2
+    \end{minipage}%
+}
+
+\newcommand{\CVSubEntryLocation}[3]{
+    \begin{minipage}[t]{0.23\textwidth}
+        \vspace{3pt}
+        \hspace{8pt}#1
+
+        \hspace{8pt}#2
+    \end{minipage}%
+    \begin{minipage}[t]{0.76\textwidth}
+        \vspace{3pt}
+        #3
+    \end{minipage}%
+}
+
+\include{vars_apple}
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{tcbraster}[raster columns=7]
+\begin{tcolorbox}[left=4pt, right=4pt, top=4pt, height=1.0\textheight, colback=sidebar, boxrule=0.5pt, arc=8pt, frame empty, raster multicolumn=2, nobeforeafter]
+    \includegraphics[width=1.0\linewidth]{./src/profile_pic_round.png}
+    %\includegraphics[width=1.0\linewidth]{./src/profile_pic.png}
+    %\includegraphics[width=1.0\linewidth]{./src/profile_pic_rounded.png}
+    \begin{center}
+        {\large \textbf{\CVName}} \\
+    \end{center}
+
+    \vspace{-7pt}
+    \begin{center}
+        {\textbf{CONTACT}} \\
+    \end{center}
+    \small
+    \begin{spacing}{1.325}
+      \begin{tabular}[c]{p{1mm}l}
+%            \faIcon{globe-americas} & \CVWebsite \\
+            \faIcon{linkedin} & \CVLinkedIn \\
+            \faIcon{envelope} & \CVMail \\
+            \faIcon{github} & \CVGithub \\
+            \faIcon{phone} & \CVPhone \\
+            \faIcon{home} & \CVAddressA \\
+             & \CVAddressB \\
+            \faIcon{birthday-cake} & \CVBirthday \\
+            \faIcon{flag} & \CVNationality
+        \end{tabular}
+    \end{spacing}
+    \vspace{-1pt}
+
+    \begin{center}
+        {\textbf{ABOUT ME}} \\
+    \end{center}
+    \begin{center}
+        \CVAboutMe
+    \end{center}
+
+    \vspace{-1pt}
+    \begin{center}
+        {\textbf{KEY SKILLS}} \\
+    \end{center}
+
+    \CVKeySkills
+
+    \vspace{-1pt}
+    \begin{center}
+        {\textbf{LANGUAGES}} \\
+    \end{center}
+    \begin{center}
+        \CVLanguages
+    \end{center}
+
+
+\end{tcolorbox}
+\begin{tcolorbox}[left=1cm, height=1.0\textheight, colback=white, raster multicolumn=5, boxrule=0pt, frame empty, nobeforeafter]
+
+    \vspace{-5pt}
+    \section*{Projects}
+    \CVProjects
+
+    \vspace{-5pt}
+    \section*{Work Experience}
+    \CVWork
+
+
+\end{tcolorbox}
+\end{tcbraster}
+
+\newpage
+
+\begin{tcbraster}[raster columns=7]
+\begin{tcolorbox}[left=4pt, right=4pt, top=4pt, height=1.0\textheight, colback=sidebar, boxrule=0.5pt, arc=8pt, frame empty, raster multicolumn=2, nobeforeafter]
+\end{tcolorbox}
+\begin{tcolorbox}[left=1cm, height=1.0\textheight, colback=white, raster multicolumn=5, boxrule=0pt, frame empty, nobeforeafter]
+
+\section*{Education}
+\CVEducation
+
+\vspace{-5pt}
+\section*{Skills and Tools}
+
+\CVSkills
+
+\vspace{5cm} % Adjust the vertical space as needed
+\CVSign
+
+\end{tcolorbox}
+\end{tcbraster}
+
+
+\end{document}

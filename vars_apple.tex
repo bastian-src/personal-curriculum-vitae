@@ -1,0 +1,231 @@
+
+\newlist{keyskills}{itemize}{3}
+\setlist[keyskills,1]{label=\textbullet,leftmargin=6mm}
+
+\newcommand{\CVName}{Bastian Schmidt}
+\newcommand{\CVLinkedIn}{\href{https://www.linkedin.com/in/bastian-schmidt-65ab6a252/}{Bastian Schmidt}}
+\newcommand{\CVWebsite}{\href{https://schmidt-systems.eu}{schmidt-systems.eu}}
+\newcommand{\CVMail}{\href{mailto:basti@schmidt-electronics.de}{basti@schmidt-electronics.de}}
+\newcommand{\CVGithub}{\href{https://github.com/bastian-src}{bastian-src}}
+\newcommand{\CVPhone}{+49 151 12939370}
+\newcommand{\CVAddressA}{Basler Str. 64}
+\newcommand{\CVAddressB}{81541 Munich, Germany}
+\newcommand{\CVBirthday}{November 11, 1997}
+\newcommand{\CVNationality}{German}
+
+\newcommand{\CVAboutMe}{
+Passionate about making things work, getting deep into problems, and learning new tools.\\
+Strong focus on hardware-oriented software engineering.\\
+% A fan of visualizing complex problems with UML-like diagrams for better understanding.\\ 
+Eager to learn new things and solve problems as a team.\\
+% Strong focus on open source solutions - contributing to achieve a public benefit.\\
+Likes to socialize, meet friends, and get in touch with new people.
+}
+
+\newcommand{\CVKeySkills}{
+\begin{keyskills}
+  \item \textbf{Programming Languages}\\ Rust, Python, C, C\texttt{++}
+  \item \textbf{Development}\\ Wireless networking, cellular communication, embedded systems, web development
+  \item \textbf{Operating Systems}\\ Unix, distributed systems, microcontroller programming
+  \item \textbf{Automation \& CI/CD}\\ Git, Docker, Jenkins, Ansible, Salt, Vagrant, KVM virtualization
+\end{keyskills}
+}
+
+\newcommand{\CVLanguages}{
+\begin{tabular}[c]{rl}
+  \textbf{German} & Native \\
+  \textbf{English} & C1 \\
+  \textbf{Dutch} & A1\\
+  \textbf{French} & A1\\
+\end{tabular}
+}
+
+\newcommand{\CVEducation}{
+\CVEntry{2020 -- present}{Technical University of Munich (TUM)}{
+    M.Sc.\ Computer Science\\
+    \vspace{-4.5mm}
+    \begin{itemize}[left=0mm]
+      \item Practical course on the seL4 Microkernel and corresponding network driver development in C
+      \item Theoretical seminar \textit{Operating Systems and Distributed Systems}, assessing networking acceleration with general-purpose GPUs
+      \item Focus on mobile communication in the courses \textit{Connected Mobility Basics} and \textit{Mobile Distributd Systems}
+    \end{itemize}
+    \vspace{3mm}
+}
+\CVSubEntry{2021 -- 2022}{
+    \textbf{University of Utrecht (UU)}\\2 Exchange Semesters in the Netherlands, Utrecht\\
+    \vspace{-4.5mm}
+    \begin{itemize}[left=0mm]
+      \item Built a 3D objects classification pipeline using Python in \textit{Multimedia Retrieval} (\href{https://cursusplanner.uu.nl/course/INFOMR/2022/1-GS}{link})
+      \item Implemented a 3D game physics engine using C\texttt{++} in \textit{Game Physics} (\href{https://cursusplanner.uu.nl/course/INFOMGP/2022/3-GS}{link})
+      %\item Study music and sound classification in \textit{Sound and Music Technology}  (\href{https://cursusplanner.uu.nl/course/INFOMSMT/2022/2}{link})
+      \item Discussed essays and philosophical concepts in \textit{Science and Dilemmas of Modernity} (\href{https://cursusplanner.uu.nl/course/FI-MHPSDM/2022/4}{link})
+    \end{itemize}
+    \vspace{3mm}
+}
+\CVEntry{2016 -- 2019}{Cooperative State University Mannheim (DHBW)}{
+    B.Sc.\ Information and Communication Technology\\
+    Dual study program with the German Aerospace Center\\
+    Grade point average: 1.7\\
+    \vspace{-4.5mm}
+    \begin{itemize}[left=0mm]
+      \item Developed embedded system libraries in C for UART and TWI communication in \textit{Systems Programming} and \textit{Practical Data Processing}
+      \item Study networking and electrical modulation in \textit{Communication and Network Technology I + II}
+      \item Circuit design and logic courses \textit{Electrical Engineering} and \textit{Digital Electronics}
+    \end{itemize}
+    \vspace{3mm}
+}
+}
+
+
+\newcommand{\CVWork}{
+  \CVEntry{2020 -- present\\Munich}{Atix AG: Working Student}{
+    {
+      %\small\begin{spacing}{0.9}
+      \vspace{-4.5mm}
+      \begin{itemize}[left=0mm]
+        \item Conceptualized, published, and maintained the Foreman Resource Quota Plugin, focusing on ER database models and Web UI (\href{https://github.com/ATIX-AG/foreman_resource_quota}{link})
+        \item Improved the Foreman Salt Plugin by implementing a secret-key authentication procedure (\href{https://youtu.be/qFa0uGq1X7U?t=0}{video})
+        \item Integrated Ubuntu Autoinstall into Foreman to enable the automated deployment of Ubuntu virtual machines (\href{https://www.youtube.com/live/n-ypOTb8bW4?si=1DJ3cudNBn9b0EUx&t=4684}{video})
+      \end{itemize}
+      %\end{spacing}%
+      \vspace{3mm}
+    }
+}
+\CVEntry{2016 -- 2020}{German Aerospace Center (DLR)}{
+    %Department of Cognitive Robotics, Industrial Robotics
+}%
+\vspace{-2mm}
+\CVSubEntryLocation{2019 -- 2020}{Munich}{
+    \textbf{Software Developer} \textmd{Group for swarm exploration}\\Dept.\ of Communication Systems
+    {
+      %\vspace{-6mm}
+      \begin{itemize}[left=0mm]
+        \item Obtained a drone flight license and assisted in multi-drone swarm exploration experiments
+        \item Designed hardware-in-the-loop tests, integrating Machine Learning models for fire detection
+      \end{itemize}
+      \vspace{1mm}
+    }%
+}%
+\CVSubEntryLocation{2016 -- 2019}{Göttingen}{
+    \textbf{Working Student} \textmd{Group for vibroacoustic analysis}\\Dept.\ of Structural Dynamics and System Identification
+    {
+      %\vspace{-6mm}
+      \begin{itemize}[left=0mm]
+        \item Designed, integrated, and evaluated an automated measurement system with an industrial KUKA robotic arm
+        \item Developed network-based control software for structural dynamics experiments hardware
+        \item Set up the test infrastructure for a comprehensive Matlab structural system analysis toolbox
+      \end{itemize}
+      \vspace{3mm}
+    }
+}
+\CVEntry{2013 -- 2016\\Warburg}{Assistant Judo Coach}{
+    {
+      \vspace{-4.5mm}
+      \begin{itemize}[left=0mm]
+        \item Supported the head coach in training the adolescent team
+        \item Prepared and conducted training sessions for the younger team independently
+      \end{itemize}
+      \vspace{6mm}
+    }
+}
+}
+
+
+\newcommand{\CVProjects}{
+\CVEntry{2024 (ongoing)\\\small{\textmd{Master Thesis}}}{SDR-assisted Congestion Control for Cellular Networks}{
+  Obtain an undestanding of cellular 3GPP protocols and physical layer resource allocation.
+  Extend state-of-the-art control channel decoding software (C/C\texttt{++}, \href{https://github.com/YaxiongXiePrinceton/NG-Scope}{link}).
+  Develop an Android app with REST API to make the phone's cellular system information accessable (Kotlin, \href{https://github.com/bastian-src/DevicePublisher}{link}).
+  Combine phone and DCI data into an automated cell status capturing tool with focus on mobile scenarios
+  (Rust, \href{https://github.com/bastian-src/UECellTracker}{link}).
+  Evaluate network performance with physical link cross-layer congestion control.
+}
+\vspace{3mm}
+
+\CVEntry{2023}{SDR-based Congestion Inference for Transport Protocols in 4G/5G}{
+  Compared and evaluated open source solutions for 4G/5G cell decoding. 
+  %Tracked and assessed cellular link layer behavior of commercial base stations. 
+  Tracked cellular link layer information to assess the behavior of commercial base stations. 
+}
+\vspace{3mm}
+
+%\CVEntry{2021}{Open Source Plugin Contribution}{
+%    Implemented a key-based authorization procedure in the \href{https://github.com/theforeman/foreman_salt}{Foreman Salt}
+%    plugin and presented it at the \href{https://youtu.be/qFa0uGq1X7U?t=0}{ForemanCon 2021}.
+%}
+%\vspace{3mm}
+
+\CVEntry{2019\\\small{\textmd{Bachelor Thesis}}}{Control Interface for Robotic Arm}{
+    Automated sound intensity measurements by integrating a KUKA industrial robot manipulator.
+    Defined a modular interface to interact with the robot. Developed the robot-side application
+    on its real-time controller. Implemented the interface as part of a Matlab toolbox.
+}
+\vspace{3mm}
+
+\CVEntry{2019}{Database Integration for a Logistic System}{
+    Developed a C++ application which maps the state of a logistic system
+    into an SQL database. Processing real-time data from the logistic system's CAN bus.
+    Designed the database's ER model and added integration test scenarios.
+}
+\vspace{6mm}
+% \vspace{3mm}
+% 
+% \CVEntry{2018 -- 2019}{Sound Intensity Measurement System}{
+%     LabVIEW data acquisition, automation of sound intensity measurements, 3D camera tracking
+% }
+}
+
+\newcommand{\CVSkills}{
+% \begin{tcbraster}[raster columns=2, raster equal height, raster column width=6cm, raster left skip=1cm, raster right skip=2cm]
+%\begin{tcbraster}[raster columns=1]
+%\begin{tcolorbox}[colback=white, boxrule=0pt, frame empty, nobeforeafter]
+%    \hspace*{-18pt}
+%    {\color{textgray} Main Programming Languages }\\
+%    \hspace*{-20pt}
+%\end{tcolorbox}
+%\begin{tcolorbox}[colback=white, boxrule=0pt, frame empty, nobeforeafter]
+%    \hspace*{-18pt}
+%    {\color{textgray} Main Tools }\\
+%    \hspace*{-20pt}
+%    \Icon{\IconSize}{.8}{./src/col_github.pdf}
+%    \Icon{\IconSize}{.8}{./src/col_gitlab.pdf}
+%    \Icon{\IconSize}{.8}{./src/col_docker.pdf}
+%    \Icon{\IconSize}{.8}{./src/col_jenkins.pdf}
+%    \Icon{\IconSize}{.8}{./src/col_neovim.pdf}
+%\end{tcolorbox}
+%\end{tcbraster}
+
+\begin{tcolorbox}[colback=white, boxrule=0pt, frame empty, nobeforeafter, width=0.95\textwidth]
+
+    {\color{textgray} Programming Languages }\\
+    \href{https://www.rust-lang.org/}{\Icon{\IconSize}{1.0}{./src/col_rust.pdf}}
+    \href{https://www.python.org/}{\Icon{\IconSize}{1.1}{./src/col_python.pdf}}
+    \href{https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html}{\Icon{\IconSize}{1.1}{./src/col_c.pdf}}
+    \href{https://isocpp.org/}{\Icon{\IconSize}{1.1}{./src/col_cpp.pdf}}
+    \href{https://www.ruby-lang.org/en/}{\Icon{\IconSize}{1.0}{./src/col_ruby.pdf}}
+    \href{https://www.javascript.com/}{\Icon{\IconSize}{1.0}{./src/col_javascript.pdf}}
+    \\\\
+    {\color{textgray} Other Tools }\\
+    \href{https://neovim.io/}{\Icon{\IconSize}{0.8}{./src/col_neovim.pdf}}
+    \href{https://github.com/}{\Icon{\IconSize}{1.1}{./src/col_github.pdf}}
+    \href{https://about.gitlab.com/}{\Icon{\IconSize}{1.1}{./src/col_gitlab.pdf}}
+    \href{https://www.docker.com/}{\Icon{\IconSize}{1.1}{./src/col_docker.pdf}}
+    \href{https://www.jenkins.io/}{\Icon{\IconSize}{1.1}{./src/col_jenkins.pdf}}
+    \href{https://www.latex-project.org/}{\begin{minipage}[c]{\IconSize\textwidth}
+        \vspace*{4pt}
+        \hspace*{-3.5pt}
+        \LARGE \LaTeX
+    \end{minipage}
+    }
+\end{tcolorbox}
+
+}
+
+\newcommand{\CVSign}{
+\begin{flushright}
+    Munich, 01.07.2024\\
+    \vspace{10mm}
+    Bastian Schmidt
+\end{flushright}
+}
+
