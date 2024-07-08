@@ -23,11 +23,12 @@ Likes to socialize, meet friends, and get in touch with new people.
 }
 
 \newcommand{\CVKeySkills}{
-\begin{keyskills}
-  \item \textbf{Programming Languages}\\ Rust, Python, C, C\texttt{++}
-  \item \textbf{Development}\\ Wireless networking, cellular communication, embedded systems, web development
-  \item \textbf{Operating Systems}\\ Unix, distributed systems, microcontroller programming
-  \item \textbf{Automation \& CI/CD}\\ Git, Docker, Jenkins, Ansible, Salt, Vagrant, KVM virtualization
+\begin{keyskills}[left=0cm]
+\item \textbf{Development}\\ Cellular communication, wireless networking, embedded systems, software engineering for maintainable \& testable code
+  %\item \textbf{Programming Languages}\\ Rust, Python, C, C\texttt{++}
+  \item \textbf{Soft Skills}\\ Strong team player, supervision experience, confident speaker
+  \item \textbf{Operating Systems}\\ Unix, distributed systems,\\microcontroller~programming
+  \item \textbf{Automation \& CI/CD}\\ Docker, Jenkins, Ansible, Salt, Vagrant, KVM virtualization
 \end{keyskills}
 }
 
@@ -47,7 +48,7 @@ Likes to socialize, meet friends, and get in touch with new people.
     \begin{itemize}[left=0mm]
       \item Practical course on the seL4 Microkernel and corresponding network driver development in C
       \item Theoretical seminar \textit{Operating Systems and Distributed Systems}, assessing networking acceleration with general-purpose GPUs
-      \item Focus on mobile communication in the courses \textit{Connected Mobility Basics} and \textit{Mobile Distributd Systems}
+      \item Focus on mobile communication in the courses \textit{Connected Mobility Basics} and \textit{Mobile Distributed Systems}
     \end{itemize}
     \vspace{3mm}
 }
@@ -83,20 +84,21 @@ Likes to socialize, meet friends, and get in touch with new people.
       %\small\begin{spacing}{0.9}
       \vspace{-4.5mm}
       \begin{itemize}[left=0mm]
-        \item Conceptualized, published, and maintained the Foreman Resource Quota Plugin, focusing on ER database models and Web UI (\href{https://github.com/ATIX-AG/foreman_resource_quota}{link})
+        \item Several contributions as part of a large-scale open source project with 350+ members, held technical presentations, and spoke at the Config Management Camp (\href{https://github.com/theforeman/foreman/pulls?q=is\%3Apr+author\%3Abastian-src}{link}, \href{https://cfp.cfgmgmtcamp.org/2024/talk/QCQTAW/}{link})
+        %\item Conceptualized, published, and maintained the Foreman Resource Quota Plugin, focusing on ER database models and React-based Web UI (\href{https://github.com/ATIX-AG/foreman_resource_quota}{link})
         \item Improved the Foreman Salt Plugin by implementing a secret-key authentication procedure (\href{https://youtu.be/qFa0uGq1X7U?t=0}{video})
         \item Integrated Ubuntu Autoinstall into Foreman to enable the automated deployment of Ubuntu virtual machines (\href{https://www.youtube.com/live/n-ypOTb8bW4?si=1DJ3cudNBn9b0EUx&t=4684}{video})
       \end{itemize}
       %\end{spacing}%
-      \vspace{3mm}
+      \vspace{1mm}
     }
 }
 \CVEntry{2016 -- 2020}{German Aerospace Center (DLR)}{
     %Department of Cognitive Robotics, Industrial Robotics
 }%
-\vspace{-2mm}
+\vspace{-1.5mm}
 \CVSubEntryLocation{2019 -- 2020}{Munich}{
-    \textbf{Software Developer} \textmd{Group for swarm exploration}\\Dept.\ of Communication Systems
+    \textbf{Software Developer} \textmd{Group for Swarm Exploration}\\Dept.\ of Communication Systems
     {
       %\vspace{-6mm}
       \begin{itemize}[left=0mm]
@@ -107,7 +109,7 @@ Likes to socialize, meet friends, and get in touch with new people.
     }%
 }%
 \CVSubEntryLocation{2016 -- 2019}{Göttingen}{
-    \textbf{Working Student} \textmd{Group for vibroacoustic analysis}\\Dept.\ of Structural Dynamics and System Identification
+    \textbf{Working Student} \textmd{Group for Vibroacoustic Analysis}\\Dept.\ of Structural Dynamics and System Identification
     {
       %\vspace{-6mm}
       \begin{itemize}[left=0mm]
@@ -115,7 +117,7 @@ Likes to socialize, meet friends, and get in touch with new people.
         \item Developed network-based control software for structural dynamics experiments hardware
         \item Set up the test infrastructure for a comprehensive Matlab structural system analysis toolbox
       \end{itemize}
-      \vspace{3mm}
+      \vspace{1mm}
     }
 }
 \CVEntry{2013 -- 2016\\Warburg}{Assistant Judo Coach}{
@@ -133,12 +135,17 @@ Likes to socialize, meet friends, and get in touch with new people.
 
 \newcommand{\CVProjects}{
 \CVEntry{2024 (ongoing)\\\small{\textmd{Master Thesis}}}{SDR-assisted Congestion Control for Cellular Networks}{
-  Obtain an undestanding of cellular 3GPP protocols and physical layer resource allocation.
-  Extend state-of-the-art control channel decoding software (C/C\texttt{++}, \href{https://github.com/YaxiongXiePrinceton/NG-Scope}{link}).
-  Develop an Android app with REST API to make the phone's cellular system information accessable (Kotlin, \href{https://github.com/bastian-src/DevicePublisher}{link}).
-  Combine phone and DCI data into an automated cell status capturing tool with focus on mobile scenarios
+  % Optimize TCP congestion control for cellular paths using LTE resource allocation information:
+  Obtain an understanding of the 3GPP 36.212/214 standards on LTE radio resource control.
+  Extend the srsRAN-based cell decoding software
+  NG-Scope (C/C\texttt{++}, \href{https://github.com/YaxiongXiePrinceton/NG-Scope}{link}).
+  Use an SDR (USRP B210) to extract PDCCH data of commercial cells and obtain fine-granular UE 
+  resource allocation information.
+  Develop an Android app with REST API to access the phone's cellular system information (Kotlin, \href{https://github.com/bastian-src/DevicePublisher}{link}).
+  Combine phone and DCI data into an automated cell status capturing tool
   (Rust, \href{https://github.com/bastian-src/UECellTracker}{link}).
-  Evaluate network performance with physical link cross-layer congestion control.
+  Optimize TCP congestion control leveraging the cellular network information.
+  % Evaluate network performance with physical link cross-layer congestion control.
 }
 \vspace{3mm}
 
@@ -146,6 +153,7 @@ Likes to socialize, meet friends, and get in touch with new people.
   Compared and evaluated open source solutions for 4G/5G cell decoding. 
   %Tracked and assessed cellular link layer behavior of commercial base stations. 
   Tracked cellular link layer information to assess the behavior of commercial base stations. 
+  Patched the Linux kernel network stack to alter the congestion control algorithm's behavior. 
 }
 \vspace{3mm}
 
@@ -157,8 +165,8 @@ Likes to socialize, meet friends, and get in touch with new people.
 
 \CVEntry{2019\\\small{\textmd{Bachelor Thesis}}}{Control Interface for Robotic Arm}{
     Automated sound intensity measurements by integrating a KUKA industrial robot manipulator.
-    Defined a modular interface to interact with the robot. Developed the robot-side application
-    on its real-time controller. Implemented the interface as part of a Matlab toolbox.
+    Developed the robot-side application on its real-time controller.
+    Defined a TCP API to control the robot and integrated it as Matlab toolbox.
 }
 \vspace{3mm}
 
@@ -167,7 +175,7 @@ Likes to socialize, meet friends, and get in touch with new people.
     into an SQL database. Processing real-time data from the logistic system's CAN bus.
     Designed the database's ER model and added integration test scenarios.
 }
-\vspace{6mm}
+\vspace{3mm}
 % \vspace{3mm}
 % 
 % \CVEntry{2018 -- 2019}{Sound Intensity Measurement System}{
@@ -195,35 +203,40 @@ Likes to socialize, meet friends, and get in touch with new people.
 %\end{tcolorbox}
 %\end{tcbraster}
 
-\begin{tcolorbox}[colback=white, boxrule=0pt, frame empty, nobeforeafter, width=0.95\textwidth]
-
-    {\color{textgray} Programming Languages }\\
-    \href{https://www.rust-lang.org/}{\Icon{\IconSize}{1.0}{./src/col_rust.pdf}}
-    \href{https://www.python.org/}{\Icon{\IconSize}{1.1}{./src/col_python.pdf}}
-    \href{https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html}{\Icon{\IconSize}{1.1}{./src/col_c.pdf}}
-    \href{https://isocpp.org/}{\Icon{\IconSize}{1.1}{./src/col_cpp.pdf}}
-    \href{https://www.ruby-lang.org/en/}{\Icon{\IconSize}{1.0}{./src/col_ruby.pdf}}
-    \href{https://www.javascript.com/}{\Icon{\IconSize}{1.0}{./src/col_javascript.pdf}}
-    \\\\
+%\begin{tcbraster}[raster columns=2, raster equal height, raster left skip=1cm, raster right skip=2cm]
+\begin{tcbraster}[raster columns=2, raster equal height, raster width=\textwidth, raster left skip=-5mm, raster right skip=-15mm]
+  \begin{tcolorbox}[colback=white, boxrule=0pt, frame empty, nobeforeafter]
+    {\color{textgray} Main Programming Languages }\\
+    \vspace{-3mm}
+    \begin{itemize}[left=0mm]
+      \item \textbf{Rust}\\
+        Real-time data processing
+      \item \textbf{Python}\\
+        Post-processing,\ visualization
+      \item \textbf{C, C\texttt{++}}\\
+        Linux kernel patching,\\microcontroller\ \&\ ARM\\ programming
+    \end{itemize}
+  \end{tcolorbox}
+  \hspace{-10mm}
+  \begin{tcolorbox}[colback=white, boxrule=0pt, frame empty, nobeforeafter]
     {\color{textgray} Other Tools }\\
-    \href{https://neovim.io/}{\Icon{\IconSize}{0.8}{./src/col_neovim.pdf}}
-    \href{https://github.com/}{\Icon{\IconSize}{1.1}{./src/col_github.pdf}}
-    \href{https://about.gitlab.com/}{\Icon{\IconSize}{1.1}{./src/col_gitlab.pdf}}
-    \href{https://www.docker.com/}{\Icon{\IconSize}{1.1}{./src/col_docker.pdf}}
-    \href{https://www.jenkins.io/}{\Icon{\IconSize}{1.1}{./src/col_jenkins.pdf}}
-    \href{https://www.latex-project.org/}{\begin{minipage}[c]{\IconSize\textwidth}
-        \vspace*{4pt}
-        \hspace*{-3.5pt}
-        \LARGE \LaTeX
-    \end{minipage}
-    }
-\end{tcolorbox}
+    \vspace{-3mm}
+    \begin{itemize}[left=0mm]
+      \item \textbf{GitLab~\&~GitHub}\\
+        Collaboration,~code~review%, CI/CD pipelines
+      \item \textbf{Virtualization}\\
+        Docker,~Vagrant,~VMware~vSphere
+      \item \textbf{Writing}\\
+        LaTeX,~Microsoft~Office~Suite
+    \end{itemize}
+  \end{tcolorbox}
+\end{tcbraster}
 
 }
 
 \newcommand{\CVSign}{
 \begin{flushright}
-    Munich, 01.07.2024\\
+    Munich, 08.07.2024\\
     \vspace{10mm}
     Bastian Schmidt
 \end{flushright}
