@@ -1,7 +1,7 @@
 *.aux
 *.bcf
 *.fls
-*.pdf
+cv*.pdf
 *.run.xml
 *.synctex.gz
 *.fdb_latexmk
