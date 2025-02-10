@@ -79,19 +79,33 @@ Likes to socialize, meet friends, and get in touch with new people.
 
 
 \newcommand{\CVWork}{
-  \CVEntry{2020 -- present\\Munich}{Atix AG: Working Student}{
+\CVEntry{2020 -- present}{Atix AG}{}
+\vspace{-1.5mm}
+\CVSubEntryLocation{2024 -- present}{Munich}{
+    \textbf{Software Developer}
     {
-      %\small\begin{spacing}{0.9}
+      %\vspace{-6mm}
+      \begin{itemize}[left=0mm]
+        \item Gained experience in management roles as the Release Coordinator
+        \item Improved code stability of Foreman plugins and testing of various hypervisors
+      \end{itemize}
+      \vspace{1mm}
+    }%
+}
+\CVSubEntryLocation{2020 -- 2024}{Munich}{
+    \textbf{Working Student}
+    {
+      %\vspace{-6mm}
       \vspace{-4.5mm}
       \begin{itemize}[left=0mm]
         \item Several contributions as part of a large-scale open source project with 350+ members, held technical presentations, and spoke at the Config Management Camp (\href{https://github.com/theforeman/foreman/pulls?q=is\%3Apr+author\%3Abastian-src}{link}, \href{https://cfp.cfgmgmtcamp.org/2024/talk/QCQTAW/}{link})
         %\item Conceptualized, published, and maintained the Foreman Resource Quota Plugin, focusing on ER database models and React-based Web UI (\href{https://github.com/ATIX-AG/foreman_resource_quota}{link})
         \item Improved the Foreman Salt Plugin by implementing a secret-key authentication procedure (\href{https://youtu.be/qFa0uGq1X7U?t=0}{video})
-        \item Integrated Ubuntu Autoinstall into Foreman to enable the automated deployment of Ubuntu virtual machines (\href{https://www.youtube.com/live/n-ypOTb8bW4?si=1DJ3cudNBn9b0EUx&t=4684}{video})
+        \item Developed the Foreman Resource Quota plugin, introduced it to the open source community, and implemented feedback (\href{https://www.youtube.com/watch?v=bzZEOiJOrCg&t=1225s}{video})
       \end{itemize}
       %\end{spacing}%
       \vspace{1mm}
-    }
+    }%
 }
 \CVEntry{2016 -- 2020}{German Aerospace Center (DLR)}{
     %Department of Cognitive Robotics, Industrial Robotics
@@ -134,28 +148,39 @@ Likes to socialize, meet friends, and get in touch with new people.
 
 
 \newcommand{\CVProjects}{
-\CVEntry{2024 (ongoing)\\\small{\textmd{Master Thesis}}}{SDR-assisted Congestion Control for Cellular Networks}{
+\CVEntry{2024\\\small{\textmd{Master Thesis}}}{SDR-assisted Congestion Control for Cellular Networks}{
   % Optimize TCP congestion control for cellular paths using LTE resource allocation information:
-  Obtain an understanding of the 3GPP 36.212/214 standards on LTE radio resource control.
-  Extend the srsRAN-based cell decoding software
+  Obtained an understanding of the 3GPP 36.212/214 standards on LTE radio resource control.
+  Extended the srsRAN-based cell decoding software
   NG-Scope (C/C\texttt{++}, \href{https://github.com/YaxiongXiePrinceton/NG-Scope}{link}).
-  Use an SDR (USRP B210) to extract PDCCH data of commercial cells and obtain fine-granular UE 
+  Used an SDR (USRP B210) to extract PDCCH data of commercial cells and obtain fine-granular UE 
   resource allocation information.
-  Develop an Android app with REST API to access the phone's cellular system information (Kotlin, \href{https://github.com/bastian-src/DevicePublisher}{link}).
-  Combine phone and DCI data into an automated cell status capturing tool
+  Developed an Android app with REST API to access the phone's cellular system information (Kotlin, \href{https://github.com/bastian-src/DevicePublisher}{link}).
+  Combined phone and DCI data into an automated cell status capturing tool
   (Rust, \href{https://github.com/bastian-src/UECellTracker}{link}).
-  Optimize TCP congestion control leveraging the cellular network information.
+  Optimized TCP congestion control leveraging the cellular network information, by
+  integrating a Linux kernel patch to the TCP network stack.
+  % Optimize TCP congestion control leveraging the cellular network information.
   % Evaluate network performance with physical link cross-layer congestion control.
 }
 \vspace{3mm}
 
-\CVEntry{2023}{SDR-based Congestion Inference for Transport Protocols in 4G/5G}{
-  Compared and evaluated open source solutions for 4G/5G cell decoding. 
-  %Tracked and assessed cellular link layer behavior of commercial base stations. 
-  Tracked cellular link layer information to assess the behavior of commercial base stations. 
-  Patched the Linux kernel network stack to alter the congestion control algorithm's behavior. 
+\CVEntry{2023\\\small{\textmd{Working Student}}}{Deployment of Ubuntu VMs in Foreman}{
+  Added new features as an active member of the open source automation and orchestration tool Foreman (\href{https://github.com/theforeman}{link}).
+  Enable the automated deployment of Ubuntu 20.04/22.04/24.04 virtual machines by integrating the Ubuntu Autoinstall
+  installation mechanism in Foreman (\href{https://www.youtube.com/live/n-ypOTb8bW4?si=1DJ3cudNBn9b0EUx&t=4684}{video}).
+  Test in different bootloader scenarios.
 }
 \vspace{3mm}
+
+
+% \CVEntry{2023}{SDR-based Congestion Inference for Transport Protocols in 4G/5G}{
+%   Compared and evaluated open source solutions for 4G/5G cell decoding. 
+%   %Tracked and assessed cellular link layer behavior of commercial base stations. 
+%   Tracked cellular link layer information to assess the behavior of commercial base stations. 
+%   Patched the Linux kernel network stack to alter the congestion control algorithm's behavior. 
+% }
+% \vspace{3mm}
 
 %\CVEntry{2021}{Open Source Plugin Contribution}{
 %    Implemented a key-based authorization procedure in the \href{https://github.com/theforeman/foreman_salt}{Foreman Salt}
@@ -170,7 +195,7 @@ Likes to socialize, meet friends, and get in touch with new people.
 }
 \vspace{3mm}
 
-\CVEntry{2019}{Database Integration for a Logistic System}{
+\CVEntry{2023\\\small{\textmd{Student Project}}}{Database Integration for a Logistic System}{
     Developed a C++ application which maps the state of a logistic system
     into an SQL database. Processing real-time data from the logistic system's CAN bus.
     Designed the database's ER model and added integration test scenarios.
