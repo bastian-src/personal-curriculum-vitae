@@ -24,11 +24,14 @@ Likes to socialize, meet friends, and get in touch with new people.
 
 \newcommand{\CVKeySkills}{
 \begin{keyskills}[left=0cm]
-\item \textbf{Development}\\ Cellular communication, wireless networking, embedded systems, software engineering for maintainable \& testable code
-  %\item \textbf{Programming Languages}\\ Rust, Python, C, C\texttt{++}
   \item \textbf{Soft Skills}\\ Strong team player, supervision experience, confident speaker
-  \item \textbf{Operating Systems}\\ Unix, distributed systems,\\microcontroller~programming
-  \item \textbf{Automation \& CI/CD}\\ Docker, Jenkins, Ansible, Salt, Vagrant, KVM virtualization
+  % \item \textbf{Development}\\ Cellular communication, wireless networking, embedded systems, software engineering for maintainable \& testable code
+  \item \textbf{Development}\\ Data acquisition and processing, cellular communication protocols, Linux network stack
+  %\item \textbf{Programming Languages}\\ Rust, Python, C, C\texttt{++}
+  % \item \textbf{Operating Systems}\\ Unix, distributed systems,\\microcontroller~programming
+  \item \textbf{Operating Systems}\\ Linux (Ubuntu, Debian, RHEL), Android programming,\\microcontroller~programming
+  % \item \textbf{Automation \& CI/CD}\\ Docker, Jenkins, Ansible, Salt, Vagrant, KVM virtualization
+  \item \textbf{Hardware Experience}\\ National Instruments devices, Ettus Research SDRs, Raspberry Pi, ATmega and ESP32
 \end{keyskills}
 }
 
@@ -42,12 +45,12 @@ Likes to socialize, meet friends, and get in touch with new people.
 }
 
 \newcommand{\CVEducation}{
-\CVEntry{2020 -- present}{Technical University of Munich (TUM)}{
+\CVEntry{2020 -- 2024}{Technical University of Munich (TUM)}{
     M.Sc.\ Computer Science\\
     \vspace{-4.5mm}
     \begin{itemize}[left=0mm]
       \item Practical course on the seL4 Microkernel and corresponding network driver development in C
-      \item Theoretical seminar \textit{Operating Systems and Distributed Systems}, assessing networking acceleration with general-purpose GPUs
+      \item Theoretical seminar \textit{Operating Systems and Distributed Systems}, assessing networking acceleration with GPUs
       \item Focus on mobile communication in the courses \textit{Connected Mobility Basics} and \textit{Mobile Distributed Systems}
     \end{itemize}
     \vspace{3mm}
@@ -79,8 +82,10 @@ Likes to socialize, meet friends, and get in touch with new people.
 
 
 \newcommand{\CVWork}{
-\CVEntry{2020 -- present}{Atix AG}{}
-\vspace{-1.5mm}
+\CVEntry{2020 -- present}{Atix AG}{
+  % ajo
+}%
+\vspace{-2.5mm}
 \CVSubEntryLocation{2024 -- present}{Munich}{
     \textbf{Software Developer}
     {
@@ -96,9 +101,8 @@ Likes to socialize, meet friends, and get in touch with new people.
     \textbf{Working Student}
     {
       %\vspace{-6mm}
-      \vspace{-4.5mm}
       \begin{itemize}[left=0mm]
-        \item Several contributions as part of a large-scale open source project with 350+ members, held technical presentations, and spoke at the Config Management Camp (\href{https://github.com/theforeman/foreman/pulls?q=is\%3Apr+author\%3Abastian-src}{link}, \href{https://cfp.cfgmgmtcamp.org/2024/talk/QCQTAW/}{link})
+        % \item Several contributions as part of a large-scale open source project with 350+ members, held technical presentations, and spoke at the Config Management Camp (\href{https://github.com/theforeman/foreman/pulls?q=is\%3Apr+author\%3Abastian-src}{link}, \href{https://cfp.cfgmgmtcamp.org/2024/talk/QCQTAW/}{link})
         %\item Conceptualized, published, and maintained the Foreman Resource Quota Plugin, focusing on ER database models and React-based Web UI (\href{https://github.com/ATIX-AG/foreman_resource_quota}{link})
         \item Improved the Foreman Salt Plugin by implementing a secret-key authentication procedure (\href{https://youtu.be/qFa0uGq1X7U?t=0}{video})
         \item Developed the Foreman Resource Quota plugin, introduced it to the open source community, and implemented feedback (\href{https://www.youtube.com/watch?v=bzZEOiJOrCg&t=1225s}{video})
@@ -110,7 +114,7 @@ Likes to socialize, meet friends, and get in touch with new people.
 \CVEntry{2016 -- 2020}{German Aerospace Center (DLR)}{
     %Department of Cognitive Robotics, Industrial Robotics
 }%
-\vspace{-1.5mm}
+\vspace{-2.5mm}
 \CVSubEntryLocation{2019 -- 2020}{Munich}{
     \textbf{Software Developer} \textmd{Group for Swarm Exploration}\\Dept.\ of Communication Systems
     {
@@ -128,8 +132,8 @@ Likes to socialize, meet friends, and get in touch with new people.
       %\vspace{-6mm}
       \begin{itemize}[left=0mm]
         \item Designed, integrated, and evaluated an automated measurement system with an industrial KUKA robotic arm
-        \item Developed network-based control software for structural dynamics experiments hardware
-        \item Set up the test infrastructure for a comprehensive Matlab structural system analysis toolbox
+        % \item Developed network-based control software for structural dynamics experiments hardware
+        \item Set up the test infrastructure for a comprehensive Matlab toolbox for structural system analysis
       \end{itemize}
       \vspace{1mm}
     }
@@ -152,24 +156,26 @@ Likes to socialize, meet friends, and get in touch with new people.
   % Optimize TCP congestion control for cellular paths using LTE resource allocation information:
   Obtained an understanding of the 3GPP 36.212/214 standards on LTE radio resource control.
   Extended the srsRAN-based cell decoding software
-  NG-Scope (C/C\texttt{++}, \href{https://github.com/YaxiongXiePrinceton/NG-Scope}{link}).
+  NG-Scope (C/C\texttt{++}, \href{https://github.com/bastian-src/NG-Scope/tree/thesis-develop}{link}).
   Used an SDR (USRP B210) to extract PDCCH data of commercial cells and obtain fine-granular UE 
   resource allocation information.
   Developed an Android app with REST API to access the phone's cellular system information (Kotlin, \href{https://github.com/bastian-src/DevicePublisher}{link}).
   Combined phone and DCI data into an automated cell status capturing tool
   (Rust, \href{https://github.com/bastian-src/UECellTracker}{link}).
   Optimized TCP congestion control leveraging the cellular network information, by
-  integrating a Linux kernel patch to the TCP network stack.
+  developing a Linux kernel patch for the TCP network stack (C, \href{https://github.com/bastian-src/linux/tree/thesis-patch/latest}{link}).
   % Optimize TCP congestion control leveraging the cellular network information.
   % Evaluate network performance with physical link cross-layer congestion control.
 }
 \vspace{3mm}
 
 \CVEntry{2023\\\small{\textmd{Working Student}}}{Deployment of Ubuntu VMs in Foreman}{
-  Added new features as an active member of the open source automation and orchestration tool Foreman (\href{https://github.com/theforeman}{link}).
-  Enable the automated deployment of Ubuntu 20.04/22.04/24.04 virtual machines by integrating the Ubuntu Autoinstall
-  installation mechanism in Foreman (\href{https://www.youtube.com/live/n-ypOTb8bW4?si=1DJ3cudNBn9b0EUx&t=4684}{video}).
-  Test in different bootloader scenarios.
+  Several contributions as part of a large-scale open source project by RedHat with 350+ members, held
+  technical presentations, and participated in community events or conferences like the Config Management Camp (\href{https://github.com/theforeman/foreman/pulls?q=is\%3Apr+author\%3Abastian-src}{link}, \href{https://cfp.cfgmgmtcamp.org/2024/talk/QCQTAW/}{link})
+  % Added new features as an active community member of the open source automation and orchestration tool Foreman (\href{https://github.com/theforeman}{link}).
+  % Demonstrate new features and hold presentations by attending community events and conferences.
+  For instance, on the topic of automated deployments of Ubuntu 20.04/22.04/24.04 virtual machines by integrating the Ubuntu Autoinstall
+  mechanism and testing it in different bootloader scenarios (\href{https://www.youtube.com/live/n-ypOTb8bW4?si=1DJ3cudNBn9b0EUx&t=4684}{video}).
 }
 \vspace{3mm}
 
@@ -190,17 +196,17 @@ Likes to socialize, meet friends, and get in touch with new people.
 
 \CVEntry{2019\\\small{\textmd{Bachelor Thesis}}}{Control Interface for Robotic Arm}{
     Automated sound intensity measurements by integrating a KUKA industrial robot manipulator.
-    Developed the robot-side application on its real-time controller.
-    Defined a TCP API to control the robot and integrated it as Matlab toolbox.
+    Developed the robot-side application on its real-time controller (KRL).
+    Defined a TCP API to control the robot and perform automated experiments using Matlab.
 }
 \vspace{3mm}
 
-\CVEntry{2023\\\small{\textmd{Student Project}}}{Database Integration for a Logistic System}{
-    Developed a C++ application which maps the state of a logistic system
-    into an SQL database. Processing real-time data from the logistic system's CAN bus.
-    Designed the database's ER model and added integration test scenarios.
-}
-\vspace{3mm}
+% \CVEntry{2019\\\small{\textmd{Student Project}}}{Database Integration for a Logistic System}{
+%     Developed a C++ application which maps the state of a logistic system
+%     into an SQL database. Processing real-time data from the logistic system's CAN bus.
+%     Designed the database's ER model and added integration test scenarios.
+% }
+% \vspace{3mm}
 % \vspace{3mm}
 % 
 % \CVEntry{2018 -- 2019}{Sound Intensity Measurement System}{
@@ -239,7 +245,7 @@ Likes to socialize, meet friends, and get in touch with new people.
       \item \textbf{Python}\\
         Post-processing,\ visualization
       \item \textbf{C, C\texttt{++}}\\
-        Linux kernel patching,\\microcontroller\ \&\ ARM\\ programming
+        Linux kernel patching,\\embedded programming on\\ microcontrollers\ \&\ ARM\ devices
     \end{itemize}
   \end{tcolorbox}
   \hspace{-10mm}
@@ -250,7 +256,7 @@ Likes to socialize, meet friends, and get in touch with new people.
       \item \textbf{GitLab~\&~GitHub}\\
         Collaboration,~code~review%, CI/CD pipelines
       \item \textbf{Virtualization}\\
-        Docker,~Vagrant,~VMware~vSphere
+        Docker/Podman,~Vagrant,\\~VMware~vSphere,~Proxmox
       \item \textbf{Writing}\\
         LaTeX,~Microsoft~Office~Suite
     \end{itemize}
