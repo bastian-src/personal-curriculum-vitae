@@ -49,7 +49,7 @@ Likes to socialize, meet friends, and get in touch with new people.
     M.Sc.\ Computer Science\\
     \vspace{-4.5mm}
     \begin{itemize}[left=0mm]
-      \item Practical course on the seL4 Microkernel and corresponding network driver development in C
+      \item Practical course on the seL4 Microkernel and corresponding network driver development in \textit{C}
       \item Theoretical seminar \textit{Operating Systems and Distributed Systems}, assessing networking acceleration with GPUs
       \item Focus on mobile communication in the courses \textit{Connected Mobility Basics} and \textit{Mobile Distributed Systems}
     \end{itemize}
@@ -60,7 +60,7 @@ Likes to socialize, meet friends, and get in touch with new people.
     \vspace{-4.5mm}
     \begin{itemize}[left=0mm]
       \item Built a 3D objects classification pipeline using Python in \textit{Multimedia Retrieval} (\href{https://cursusplanner.uu.nl/course/INFOMR/2022/1-GS}{link})
-      \item Implemented a 3D game physics engine using C\texttt{++} in \textit{Game Physics} (\href{https://cursusplanner.uu.nl/course/INFOMGP/2022/3-GS}{link})
+      \item Implemented a 3D game physics engine using \textit{C\texttt{++}} in \textit{Game Physics} (\href{https://cursusplanner.uu.nl/course/INFOMGP/2022/3-GS}{link})
       %\item Study music and sound classification in \textit{Sound and Music Technology}  (\href{https://cursusplanner.uu.nl/course/INFOMSMT/2022/2}{link})
       \item Discussed essays and philosophical concepts in \textit{Science and Dilemmas of Modernity} (\href{https://cursusplanner.uu.nl/course/FI-MHPSDM/2022/4}{link})
     \end{itemize}
@@ -72,7 +72,7 @@ Likes to socialize, meet friends, and get in touch with new people.
     Grade point average: 1.7\\
     \vspace{-4.5mm}
     \begin{itemize}[left=0mm]
-      \item Developed embedded system libraries in C for UART and TWI communication in \textit{Systems Programming} and \textit{Practical Data Processing}
+      \item Developed embedded system libraries in \textit{C} for UART and TWI communication in \textit{Systems Programming} and \textit{Practical Data Processing}
       \item Studied networking and electrical modulation in \textit{Communication and Network Technology I + II}
       \item Covered circuit design and digital logic in \textit{Electrical Engineering} and \textit{Digital Electronics}
     \end{itemize}
@@ -150,28 +150,29 @@ Likes to socialize, meet friends, and get in touch with new people.
 }
 }
 
+% Maybe, mention IDP here too (Master Thesis and IDP)
 
 \newcommand{\CVProjects}{
 \CVEntry{2024\\\small{\textmd{Master Thesis}}}{SDR-assisted Congestion Control for Cellular Networks}{
   % Optimize TCP congestion control for cellular paths using LTE resource allocation information:
   Obtained an understanding of the 3GPP 36.212/214 standards on LTE radio resource control.
   Extended the srsRAN-based cell decoding software
-  NG-Scope (C/C\texttt{++}, \href{https://github.com/bastian-src/NG-Scope/tree/thesis-develop}{link}).
+  NG-Scope (\textit{C/C\texttt{++}}, \href{https://github.com/bastian-src/NG-Scope/tree/thesis-develop}{link}).
   Used an SDR (USRP B210) to extract PDCCH data of commercial cells and obtain fine-granular UE 
   resource allocation information.
-  Developed an Android app to access the phone's cellular system information (Kotlin, \href{https://github.com/bastian-src/DevicePublisher}{link}).
+  Developed an Android app to access the phone's cellular system information (\textit{Kotlin}, \href{https://github.com/bastian-src/DevicePublisher}{link}).
   Combined phone and DCI data into an automated cell status capturing tool
-  (Rust, \href{https://github.com/bastian-src/UECellTracker}{link}).
+  (\textit{Rust}, \href{https://github.com/bastian-src/UECellTracker}{link}).
   Optimized TCP congestion control leveraging the cellular network information, by
-  developing a Linux kernel patch for the TCP network stack (C, \href{https://github.com/bastian-src/linux/tree/thesis-patch/latest}{link}).
+  developing a Linux kernel patch for the network stack (\textit{C}, \href{https://github.com/bastian-src/linux/tree/thesis-patch/latest}{link}).
   % Optimize TCP congestion control leveraging the cellular network information.
   % Evaluate network performance with physical link cross-layer congestion control.
 }
 \vspace{3mm}
 
-\CVEntry{2023\\\small{\textmd{Working Student}}}{Deployment of Ubuntu VMs in Foreman}{
+\CVEntry{2023\\\small{\textmd{Working Student}}}{Member of the Open Source Community \textit{Foreman}}{
   Several contributions as part of a large-scale open source project by RedHat with 350+ members, held
-  technical presentations, and participated in community events or conferences like the Config\ Management\ Camp (Ruby\ on\ Rails/React, \href{https://github.com/theforeman/foreman/pulls?q=is\%3Apr+author\%3Abastian-src}{link}\ \href{https://cfp.cfgmgmtcamp.org/2024/talk/QCQTAW/}{link}).
+  technical presentations, and participated in community events or conferences like the Config\ Management\ Camp (\textit{Ruby\ on\ Rails/React}, \href{https://github.com/theforeman/foreman/pulls?q=is\%3Apr+author\%3Abastian-src}{link}\ \href{https://cfp.cfgmgmtcamp.org/2024/talk/QCQTAW/}{link}).
   % Added new features as an active community member of the open source automation and orchestration tool Foreman (\href{https://github.com/theforeman}{link}).
   % Demonstrate new features and hold presentations by attending community events and conferences.
   For instance, on the topic of automated deployments of Ubuntu virtual machines by integrating the Ubuntu Autoinstall
@@ -197,7 +198,7 @@ Likes to socialize, meet friends, and get in touch with new people.
 \CVEntry{2019\\\small{\textmd{Bachelor Thesis}}}{Control Interface for Robotic Arm}{
     Automated sound intensity measurements by integrating a KUKA industrial robot manipulator.
     Developed the robot-side application on its real-time controller (KRL).
-    Defined an API to control the robot and perform automated experiments (Matlab).
+    Defined an API to control the robot and perform automated experiments (\textit{Matlab},~\textit{LabVIEW}).
 }
 \vspace{3mm}
 
@@ -242,10 +243,10 @@ Likes to socialize, meet friends, and get in touch with new people.
     \begin{itemize}[left=0mm]
       \item \textbf{Rust}\\
         Real-time data processing
-      \item \textbf{Python}\\
-        Post-processing,\ visualization
       \item \textbf{C, C\texttt{++}}\\
         Linux kernel patching,\\embedded programming on\\ microcontrollers\ \&\ ARM\ devices
+      \item \textbf{Python}\\
+        Post-processing,\ visualization
     \end{itemize}
   \end{tcolorbox}
   \hspace{-10mm}
