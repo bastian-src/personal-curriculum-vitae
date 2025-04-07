@@ -1,3 +1,4 @@
+*.json
 *.aux
 *.bcf
 *.fls
