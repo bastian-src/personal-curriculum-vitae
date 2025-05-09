@@ -1,0 +1,119 @@
+\newcommand{\CLDate}{18. April 2025}
+
+\newcommand{\CLCompanyHeader}{
+\fontsize{28pt}{32pt}\fontspec{Noto Sans}\textbf{ADVANTECH}
+}
+
+\newcommand{\CLContactMe}{
+\begin{tabular}{l @{}}
+  \CLDate \bigskip\\
+  Bastian Schmidt \\
+  Basler Straße 64\\
+  81476 München\\
+  (+49) 15112939370%\\
+  % basti@schmidt-electronics.de
+\end{tabular}
+}
+
+\newcommand{\CLContactCompany}{
+\begin{tabular}{@{} l}
+  Thomas Kastner\\ 
+  Senior Director Embedded Engineering | EIoT Europe\\ 
+  Advantech Europe BV\\ 
+  Industriestr. 15\\
+  82110 Germering
+
+\end{tabular}
+}
+
+\newcommand{\CLPosition}{
+{ \fontsize{12pt}{14pt}\fontspec{Noto Sans}\textbf{Application Assignment}}\\
+}
+
+\newcommand{\CLContent} {
+
+  { \fontsize{8pt}{10pt}\textit{Scenario 1 Description}}\\
+  The company ABC Corp. wants to build a HMI frontend for their industrial
+  robots, consisting of \textit{RSB-3720} running \textit{Yocto} and
+  \textit{AUO G070VW01 7“ LVDS} display.\\
+  They are asking if the display is supported or how to enable/activate it? Can you help?
+
+  { \fontsize{8pt}{10pt}\textit{Scenario 1 Answer}}\\
+  According to the datasheet (compare [1]), all respective versions of the \textit{RSB-3720}
+  (e.g. CD, WD, QC, and WQ) feature 1 Single Channel or 1 Dual Channel 24-bit LVDS.
+  The \textit{AUO G070VW01 7“ LVDS} is a single channel LVDS panel (compare [2]) and should therefore be
+  compatible with the \textit{RSB-3720} from a hardware perspective.
+
+  Moreover, the \textit{RSB-3720} datasheet lists optional accessories, and the requested
+  AUO LVDS display is included in that list. Accordingly, I assume that it is
+  supported. To enable/activate the display, it is important to ensure that the cable pinout
+  matches the connector on the \textit{RSB-3720} board.
+
+  In order to enable the display, the Linux image must include the appropriate driver.
+  The Advantech meta repository (see query in [3]) lists instances of LVDS displays
+  in combination with AUO, so I assume a corresponding driver is available.
+  If the driver is present in the image, the display should work automatically when connected.
+
+  \bigskip
+
+
+  { \fontsize{8pt}{10pt}\textit{Scenario 2 Description}}\\
+  ABC Corp. have decided to use a different LVDS based display, with
+  integrated USB based touch controller.\\
+  Is this possible / what would be the impact or effort?
+
+  { \fontsize{8pt}{10pt}\textit{Scenario 2 Answer}}\\
+  If a compatible driver for the LVDS display is available, then using a different panel with
+  an integrated USB-based touch controller should be possible.
+
+  A query of the Advantech meta repository shows examples of enabling touchscreen support
+  for certain boards. However, it is essential that a driver for the new touch controller
+  exists and is supported on the \textit{RSB-3720}.
+
+  One direct impact would be that one of the available USB ports will be occupied
+  by the display’s touch controller, and thus not available for other peripherals.
+
+
+
+  \newpage
+  { \fontsize{8pt}{10pt}\textit{Scenario 3 Description}}\\
+  The product has been moved to mass production and is shipping in volume.
+  Unfortunately, due to a component shortage in the market, the
+  \textit{Ethernet PHY Qualcomm AR8035} that has been used on \textit{RSB-3720}
+  originally is not available anymore. Advantech have redesigned
+  \textit{RSB-3720} to a new HW revision, using the
+  \textit{Realtek RTL8211FS PHY}.\\
+  What is the impact on Advantech and on customer side? Is it possible
+  to support both HW versions with one BSP version only?
+
+  { \fontsize{8pt}{10pt}\textit{Scenario 3 Answer}}\\
+  If any customer Linux images do not support the new \textit{Realtek RTL8211FS PHY},
+  they may experience issues—especially if they rely on Ethernet functionality, which is very likely.
+
+  Supporting both hardware versions with a single BSP image is a sound approach.
+  To achieve this, the image must be compiled with drivers for both PHYs, and no relevant
+  drivers or kernel modules should be blacklisted.
+
+  Additionally, a query of the Advantech meta repository suggests that the Realtek RTL PHY
+  uses a common and widely supported firmware.
+
+  In this case, customer impact should be minimal. However, if customers use
+  custom-built images that lack the new PHY driver, they may encounter issues.
+  Therefore, it is advisable to notify customers proactively about the hardware change.
+
+
+  \bigskip
+  \bigskip
+  \bigskip
+
+  [1] Advantech RSB-3720 datasheet\\\url{https://advdownload.advantech.com/productfile/PIS/RSB-3720/file/RSB-3720_DS(080122)20220801131816.pdf}
+
+  [2] AUO G070VW01.012 specifications\\\url{https://www.auo-lcd.com/products/auo-lcd-screen/7inch/588.html}
+  
+  [3] ADVANTECH-Corp/meta-advantech2: auo query\\\url{https://github.com/search?q=repo\%3AADVANTECH-Corp\%2Fmeta-advantech2\%20auo\&type=code}
+  
+  [4] ADVANTECH-Corp/meta-advantech2: touchscreen query\\\url{https://github.com/search?q=repo\%3AADVANTECH-Corp\%2Fmeta-advantech2\%20touchscreen\&type=code}
+  
+  [5] ADVANTECH-Corp/meta-advantech2: RTL query\\\url{https://github.com/search?q=repo\%3AADVANTECH-Corp\%2Fmeta-advantech2+RTL\&type=code}
+
+}
